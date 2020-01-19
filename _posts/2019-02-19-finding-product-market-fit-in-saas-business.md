@@ -2,9 +2,7 @@
 layout: post
 date: 2019-02-19
 title: Finding product market fit in a SaaS business idea involves cracking 3 things
-categories:
-  - saas
-  - pmf
+categories: [saas, pmf]
 comments: true
 ---
 

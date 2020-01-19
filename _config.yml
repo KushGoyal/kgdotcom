@@ -32,6 +32,7 @@ linkedin_username:  kushgoyal
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 show_excerpts: true
 permalink: /:title/
 header_pages:
