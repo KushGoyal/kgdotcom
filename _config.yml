@@ -39,6 +39,10 @@ header_pages:
   - about.markdown
 disqus:
     shortname: kushgoyal-com
+minima:
+  social_links:
+    twitter: kushgoyal42
+    linkedin: kushgoyal
 
 # Exclude from processing.
 # The following items will not be processed, by default.
