@@ -19,6 +19,8 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Kush's blog
+# author:
+#   name: Kush Goyal
 author: Kush Goyal
 description: >- # this means to ignore newlines until "baseurl:"
   Blog of Kush Goyal. I am an entrepreneur and a dreamer.
@@ -38,7 +40,7 @@ permalink: /:title/
 header_pages:
   - about.markdown
 disqus:
-    shortname: kushgoyal-com
+  shortname: kushgoyal-com
 minima:
   social_links:
     twitter: kushgoyal42

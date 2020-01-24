@@ -2,9 +2,7 @@
 layout: post
 date: 2019-02-21
 title: Login api using Django Rest Framework Token Authentication with Google Recaptcha and token expiry
-categories:
-  - django
-  - coding
+categories: [django]
 comments: true
 ---
 
