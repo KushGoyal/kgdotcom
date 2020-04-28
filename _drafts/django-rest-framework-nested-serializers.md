@@ -13,4 +13,21 @@ But this freedom causes confusion among new developers.
 
 Stackoverflow has many questions asking the how to save nested 
 model data using a model serializer. I don't like most of the answers given there because most of them are very complicated.
-Drf documentation has given a small sample code to get flavour of how it should be done. 
+Drf documentation has given a small sample code to get a flavour of how it should be done.
+
+The most common example of nested serializer is inner model having the foreign key relation to the outer model. For example
+an invoice with many invoice lines.
+
+Creation is straight forward; you have to create all the invoice lines when saving the invoice. Updating has several different 
+cases:
+- Create new invoice lines which did not exist before (id == None)
+- Update invoice lines which still exist (id != None)
+- Delete invoice lines which are no longer in the list
+
+To handle the above cases you have to modify both the create and update method on the serializer of the parent.
+
+First lets look at the parent serializer code.
+
+```python
+
+```
