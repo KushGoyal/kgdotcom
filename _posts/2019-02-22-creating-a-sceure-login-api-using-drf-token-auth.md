@@ -17,6 +17,7 @@ I have added:
 * Google recaptcha support
 * password change token expiry
 * Saving the last login time
+<!--more-->
 
 The code runs on Django 2.1.x and DRF 3.8.x and 3.9.x
 

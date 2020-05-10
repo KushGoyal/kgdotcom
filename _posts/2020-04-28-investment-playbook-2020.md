@@ -13,6 +13,7 @@ comments: true
 - Buy fixed return options like PF
 - Maintain liquidity while playing long term
 - Invest then investigate
+<!--more-->
 
 Types of investment:
 

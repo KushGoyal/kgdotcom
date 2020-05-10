@@ -15,6 +15,7 @@ what to sell and how to sell.
 * Customer definition and understanding
 * State what are you solving
 * Differentiation
+<!--more-->
 
 Let me elaborate on both my experiences and explain why these are the 3 main points which you want to get right.
 
