@@ -12,6 +12,7 @@ comments: true
 - When black swan events happen, make some hedging bets
 - Buy fixed return options like PF
 - Maintain liquidity while playing long term
+- Invest then investigate
 
 Types of investment:
 
