@@ -10,6 +10,5 @@ $ bundle exec jekyll serve --watch --drafts
 ~~~
 
 ~~~bash
-$ JEKYLL_ENV=production bundle exec jekyll build
-$ firebase deploy
+$ JEKYLL_ENV=production bundle exec jekyll build; firebase deploy
 ~~~
