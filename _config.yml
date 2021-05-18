@@ -19,9 +19,10 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Kush's blog
-# author:
-#   name: Kush Goyal
-author: Kush Goyal
+author:
+  name: Kush Goyal
+  email: ''
+#author: Kush Goyal
 description: >- # this means to ignore newlines until "baseurl:"
   Blog of Kush Goyal. I am an entrepreneur and a dreamer.
   Currently I am running my software company sumtracker.com
@@ -44,6 +45,7 @@ minima:
   social_links:
     twitter: kushgoyal42
     linkedin: kushgoyal
+    github: 'kushgoyal'
 
 # Exclude from processing.
 # The following items will not be processed, by default.
