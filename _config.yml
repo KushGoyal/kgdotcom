@@ -40,8 +40,6 @@ show_excerpts: true
 permalink: /:title/
 header_pages:
   - about.markdown
-disqus:
-  shortname: kushgoyal-com
 minima:
   social_links:
     twitter: kushgoyal42

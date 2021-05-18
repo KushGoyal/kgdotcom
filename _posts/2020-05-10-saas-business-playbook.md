@@ -3,7 +3,6 @@ layout: post
 date: 2020-05-10
 title: SaaS Business Playbook 2020
 categories: [saas]
-comments: true
 ---
 
 First decide what is your strength.

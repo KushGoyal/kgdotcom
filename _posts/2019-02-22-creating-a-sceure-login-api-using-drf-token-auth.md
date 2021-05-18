@@ -3,7 +3,6 @@ layout: post
 date: 2019-02-21
 title: Login api using Django Rest Framework Token Authentication with Google Recaptcha and token expiry
 categories: [django]
-comments: true
 ---
 
 Django Rest Framework (DRF) is an amazing framework to create a REST API.

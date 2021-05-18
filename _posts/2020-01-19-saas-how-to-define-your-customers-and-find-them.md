@@ -3,7 +3,6 @@ layout: post
 date: 2020-01-19
 title: How to define your customers and find them
 categories: [saas]
-comments: true
 ---
 
 I have made multiple attempts at starting a successful SAAS business. This time I think I have been able to do it. I am running [sumtracker](https://sumtracker.com/), an inventory and operations management software for product brands. We are still early but I am very confident about what we are doing. We have paying customers who are happy with the service and have got real tangible results from sumtracker.

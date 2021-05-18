@@ -3,7 +3,6 @@ layout: post
 date: 2020-04-28
 title: My investment playbook 2020
 categories: [investing]
-comments: true
 ---
 
 - Diversify into different markets and investment options

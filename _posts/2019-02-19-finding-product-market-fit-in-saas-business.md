@@ -3,7 +3,6 @@ layout: post
 date: 2019-02-19
 title: Finding product market fit in a SaaS business idea involves cracking 3 things
 categories: [saas]
-comments: true
 ---
 
 These are important to make sure you don’t fail. In my experience of trying to build a SaaS company I failed twice on all 3 aspects. 

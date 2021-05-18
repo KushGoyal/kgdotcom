@@ -12,3 +12,5 @@ $ bundle exec jekyll serve --watch --drafts
 ~~~bash
 $ JEKYLL_ENV=production bundle exec jekyll build; firebase deploy
 ~~~
+
+# https://www.viget.com/articles/bundler-best-practices/
