@@ -19,7 +19,7 @@ Eth 2.0 is divided into several phases. Phase 0 is the launch of the beacon chai
 
 Beacon chain uses PoS to finalise blocks.  Miners have been replaced with validators who now validate blocks instead of mining them. Each validator  has to stake 32 eth.  A single node can run multiple validators. 
 
-Eth PoS uses an algorithm called RANDOW to randomly select validators who vote on the validity of blocks.  If any of the validators vote for an invalid block they get penalised and their staked eth gets slashed. And for an attack one third of all validators need to vote for invalid blocks. But this is super expensive since the slashing mechanism will make the cost of maintaining such an attack infeasible.
+Eth PoS uses an algorithm called RANDAO to randomly select proposers who propose the block and validators who vote on the validity of block.  If a proposer submits an invalid block which does not get majority vote they get penalised and their staked eth gets slashed. Validator are also punished via slashing if they vote for a block which does not gets included in the chain. And for an attack one third of all validators need to vote for invalid blocks. But this is super expensive since the slashing mechanism will make the cost of maintaining such an attack infeasible.
 
 Currently there is no activity on the beacon chain except distribution of staking rewards. Staking is done via depositing eth1 to a smart contract on eth1 PoW blockchain which then connects with the beacon chain somehow to register the transaction for staking the same amount of eth2.
 
