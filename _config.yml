@@ -56,13 +56,11 @@ minima:
 exclude:
   - .sass-cache/
   - .jekyll-cache/
+  - .firebase/
   - gemfiles/
   - Gemfile
   - Gemfile.lock
   - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - vendor/
   - README.md
   - firebase.json
