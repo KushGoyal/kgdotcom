@@ -31,7 +31,7 @@ The merge phase is a mega huge milestone since eth blockchain will completely mo
 
 PoS will reduce the eth issuance rate compared to PoW. Another upgrade which will affect issuance is **fee burning**. Currently the miner who produces the block takes all the fees. After the hard fork to introduce fee burning, miners will only get a tip or preference fee and the actual fee to process the transaction will get burned. 
 
-In PoW the miner who finds the block collects both the block reward and the fee from the transactions in the block. In PoS there is one block proposer and several validators who vote for the validity of the block. Proposer and validators get rewards if the block gets included in the blockchain. With fee burning the block proposer will be able to collect only the tips specified by the users. The tip is to incentive for faster inclusion in the block.
+In PoW the miner who finds the block collects both the block reward and the fee from the transactions in the block. In PoS there is one block proposer and several validators who vote for the validity of the block. Proposer and validators get rewards if the block gets included in the blockchain. With fee burning the block proposer will be able to collect only the tips specified by the users. The tip is an incentive for faster inclusion in the block.
 
 The merging will be done in a way to keep the history of the blockchain intact and use the same virtual machine for contract execution. So that existing contracts are not disturbed.
 
@@ -43,7 +43,7 @@ The next phase will be release of **shard chains**. Each shard is identical in f
 
 **Plasma chains** are layer 2 blockchains which use eth layer 1 to provide additional security using fraud proofs. If any malicious transaction happens on the plasma chain it can be disputed on the eth layer 1 using fraud proofs. Plasma chains keep posting states to layer 1.  Plasma chain is great for scalability since it manages all the complexity but draws security from layer 1.
 
-Eth2.0 is a colossal upgrade and will change eth landscape. Most of it just about to get live. 3 main take aways are: PoS, low issuance rate and layer 2 solutions.
+Eth2.0 is a colossal upgrade and will change eth landscape. Most of it is just about to get live in 2021. 3 main takeaways are: PoS, low issuance rate and layer 2 solutions.
 
 ### Read more
 <https://research.paradigm.xyz/rollups>  
