@@ -1,0 +1,72 @@
+==================================================================
+https://keybase.io/kushgoyal
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://kushgoyal.com
+  * I am kushgoyal (https://keybase.io/kushgoyal) on keybase.
+  * I have a public key with fingerprint 0A87 A739 2CF9 C107 471D  E75B 4714 0CF6 291F 0243
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101f096444cb371886a3fd7125493d238e77c7ec9856c0f464ee1eec7b4329e60030a",
+      "fingerprint": "0a87a7392cf9c107471de75b47140cf6291f0243",
+      "host": "keybase.io",
+      "key_id": "47140cf6291f0243",
+      "kid": "0101f096444cb371886a3fd7125493d238e77c7ec9856c0f464ee1eec7b4329e60030a",
+      "uid": "bd7b9f578000ec1c510c4f955d5f6c19",
+      "username": "kushgoyal"
+    },
+    "service": {
+      "hostname": "kushgoyal.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1622356744,
+  "expire_in": 157680000,
+  "prev": "ea2e2b852a7b1919e085959fb4abcc982cda16679ed679c878e40a3117f3e050",
+  "seqno": 18,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owGtUmtMFFcU5qUBCQ8VFBC6YYwsmEXmfWfWB6VC0VKoBVrQWrbzuLMMCzuws0sl
+K0pozUIslq1QYs1GS1sbpUgtqJH0IQRaFVO1hKgp4CNWQoNgDSnF2NoZUv80/dk/
+9+Se833f+c7JaQ4L9Av2T7gEHyJYjcF/aJL3e6ubSHQjvCLWIGY3YoMLAZaLUHVa
+bLKImBEUQzEJZWmSJAWeABjD0BwhiQDDKZIlRJxgIAACgALLULSASiRNQohBKACe
+JHAW0ihKoBxiQiTZboWOSodsd+qyHAM4QLC4ILEChgISYCIEFK9FEhUkGme1rjhJ
+aMRSRdUZmjmeU+E6WdFy2seyYO8/8P+zb9eCHC8CnpUowKAoCgVMoDBUICWWokRK
+ogWM1YEqdNi5Cqh7damlVqWGK0dqTYiWrpYFqG9WH+XfkHWCUqGxKx2KUxGUcq1U
+6nRWqmad6qyp1LFvQ97yj4qFl+2itkmNUQ0dqqzYETOmIQWnrMtiNI4TFA1I0oTA
+XZWyA1pkHUEBWneO6n1gtSYJORzib/AMhXOAx1iMhShDsRQr8STHC9pScEHkMJoG
+LBS1R2AAA0mUIzAMSAREKRTRB6uyK5o4oxnlrJqoKlvtnNPlgEjtksYAIsjPP9gv
+YUViUPrO8JUDBSqIb/zj7LPzWxSg357fkpDIZ5lpY8RfGBcbszKruGd33fX0qLx9
+1h2tsPHar9558eaJwTs+en9URsxhd9uN1587MpP5VeryiYnpqM7sgakKl+fLyfBN
+eUlBY3sy3ZHnii8GmxVnf14B8/1Okxh4RiiIPxZH5rTvAIbEkYgg79oWU2JX3U9X
+iU+brnWuN9fnzNz02Bxzww0XKrD4p6cfh7TaHvsGDf3Rdw7Lxg+tlL2jv6R1qve7
+kszNL3+bsKGvZeMv3um73qPvFI49avb1px9t3Ky+omYbz4MyJnw85JMTPuPMRxPR
+EauKuuOqfC/I2OktnoHYK1ObvjbU58Rl/tn1vGX77eS4vlDDg6dtrbNDP3Q2CGzp
++pPLRue708qych3D36QWFNbD/Mvv01Xb5gsz0lKC00L7zpb7nuytfvfe/bSk2NHe
+JwcNUoinOiDpkjfrRVNOw93klFsPdjUvDvux8Ite1rZo8OHl1eFNkfknh6pMa1KK
+hitey779cfub7gvpQv5ofOfo1rIPwnKzeo672mdDc+m5YlvdOFl2hCHVA8c8yu9T
+BdcPndr22+7xLvd7B16NIdoOtXXAsH0jhVfW4j3GkftdKQ0ZQefPLG/6XP55S0jH
+4NVHtl6H58bFqORzaHBRbsvWqGWzL8UqK7I3Ks6S1XtS9wamRx9fbGy6FTfsGjtV
+n1y7dGl46dyGe3kuW/RQDYwH26NXfTb5Nw==
+=/nIT
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/kushgoyal
+
+==================================================================
