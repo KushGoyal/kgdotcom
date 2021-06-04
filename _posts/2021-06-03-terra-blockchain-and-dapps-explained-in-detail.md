@@ -30,7 +30,11 @@ TerraSDR (SDT) is the default stablecoin hardcoded in Terra. SDT is pegged to [S
 Terra uses [constant product](https://docs.terra.money/dev/spec-market.html#market-making-algorithm) market marking algorithm. The market is initialised with equal pools of Luna and SDR. The pools are equal in terms of their worth in SDR and the size of the pools is decided by the parameter called `BasePool`.  These are [virtual liquidity pools](https://docs.terra.money/dev/spec-market.html#virtual-liquidity-pools) used for protecting against front running the oracles. By virtual it means that these pools do not exist and no tokens have been deposited in them. This is an algorithm which is integral part of the Terra code.
 
 ```python
+# set by the BASE_POOL paramter
+POOL_BASE = 1000
+# initially equal to POOL_BASE
 POOL_SDR = 1000
+# this price is reported by oracles
 PRICE_LUNA_PER_SDR = 0.5
 # With the price changes POOL_LUNA will keep changing
 POOL_LUNA = 2000  # 1000 / 0.5
@@ -42,7 +46,7 @@ After each minting transaction the sizes of the pools change. The protocol store
 The new size of pool after the minting SDT will be:
 ```
 POOL_SDR = POOL_BASE + TERRA_POOL_DELTA
-POOL_LUNA = POOL_BASE^2 / POOL_SDR
+POOL_LUNA = POOL_BASE^2 / (POOL_SDR * PRICE_LUNA_PER_SDR)
 ```
 
 `TerraPoolDelta` is decreased over a period called `PoolRecoveryPeriod`.  This is done to reduce the spread between pools so that minting can be economical again.
@@ -83,7 +87,7 @@ bAssets are fungible tokens received for staking tokens in a PoS chain. They pro
 
 [bLuna](https://docs.anchorprotocol.com/protocol/bonded-assets-bassets/bonded-luna-bluna) are the bAssets in the Terra chain. bLuna can be used as CDP in anchor. A user has to delegate Luna from a list of whitelisted validators to be eligible to get bLuna. bLuna rate is adjusted based on slashing events.
 
-```python
+```
 bLuna redemtion rate = amount of Luna delegated / amount of bLuna minted
 ```
 
@@ -91,7 +95,7 @@ The amount of Luna delegated can get reduced because of slashing events. For exa
 
 The lenders get the staking rewards from the pool of bLuna collateral. Lenders are given [aTerra](https://docs.anchorprotocol.com/protocol/money-market#anchor-terra-aterra) tokens for the principal they deposited. The exchange value of new aTerra tokens generated is equal to the value of deposit made. aTerra value increases as deposits accrue interest. aTerra can be redeemed for stablecoins.
 
-```python
+```
 aTerra_exchange_rate = (total_deposits + total_interest) / total_aTerra
 ```
 
