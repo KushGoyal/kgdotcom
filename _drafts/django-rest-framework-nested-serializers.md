@@ -3,7 +3,6 @@ layout: post
 date: 2020-01-21
 title: How to handle nested serializers in Django Rest Framework
 categories: [django]
-comments: true
 ---
 
 Django Rest Framework (DRF) does not handle nested json data out of the box. There is an important reason for that.
@@ -18,8 +17,7 @@ Drf documentation has given a small sample code to get a flavour of how it shoul
 The most common example of nested serializer is inner model having the foreign key relation to the outer model. For example
 an invoice with many invoice lines.
 
-Creation is straight forward; you have to create all the invoice lines when saving the invoice. Updating has several different 
-cases:
+Creation is straight forward; you have to create all the invoice lines when saving the invoice. Updating has many cases:
 - Create new invoice lines which did not exist before (id == None)
 - Update invoice lines which still exist (id != None)
 - Delete invoice lines which are no longer in the list

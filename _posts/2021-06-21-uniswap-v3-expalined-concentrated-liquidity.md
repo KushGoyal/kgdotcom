@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2021-06-21
-title: Uniswap V3 explained - Concentrated Liquidity, Impermanent Loss, Slippage
+title: Uniswap V3 Explained - Concentrated Liquidity, Impermanent Loss, Slippage
 categories: [crypto]
 ---
 
