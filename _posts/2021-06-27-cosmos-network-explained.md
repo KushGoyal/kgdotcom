@@ -3,11 +3,11 @@ layout: post
 date: 2021-06-21
 title: Cosmos Network Explained - Cosmos Hub, ATOM tokens, Gravity DEX
 categories: [crypto]
+image: /images/2021-06-27/cosmos-zones-4k.png
 ---
 [Cosmos](https://v1.cosmos.network/resources/whitepaper) is a network of interoperable blockchains. Cosmos uses [Tendermint](https://docs.tendermint.com/master/) BFT which is PoS based consensus algorithm. Tendermint BFT is an open source platform and can be used by any project.
 
 To create a network of blockchains Cosmos provides [CosmosSDK](https://docs.cosmos.network) (the application layer) and Tendermint SDK (the network and consensus layer) to give complete tools to launch a public or private blockchain. All the blockchains will implement [IBCI](https://ibcprotocol.org) (inter blockchain communication interface) so that they can transfer tokens and data between each other seamlessly.
-
 <!--more-->
 
 ## Horizontal Scalability
@@ -23,7 +23,9 @@ To support high TPS in a PoS network you will have to compromise on decentralisa
 
 Ethereum 2.0 (PoS based) is solving scalability by using using 64 shard chains. Sharding is a known method to horizontally scale the database. The block time in Ethereum will be 12s after migrating to PoS which is just .5s faster than the current block time of 12.5s. With 64 shards the transaction speed of Ethereum will be around 1000 TPS. With a variety of layer 2 solutions Ethereum aims to bring transaction speed to 100K TPS.
 
-To support the global financial system it will take a lot more than 100K TPS. Cosmos network does not want to be limited by the TPS of a single blockchain. Cosmos network will have many blockchains which can communicate with each other. Each blockchain can use layer 2 solutions to scale itself. With no limit on number of blockchains connected to the network scalability can be solved by adding more blockchains when existing ones are full up to the maximum TPS. Cosmos network will have blockchains for [specific use cases](https://blog.cosmos.network/why-application-specific-blockchains-make-sense-32f2073bfb37) which makes the network more efficient since blockchains can choose to not add a virtual machine in the nodes. Application specific blockchains can code the logic in the transaction itself rather than executing code in a virtual machine loaded inside the node.
+To support the global financial system it will take a lot more than 100K TPS. Cosmos network does not want to be limited by the TPS of a single blockchain. Cosmos network will have many blockchains which can communicate with each other. Each blockchain can use layer 2 solutions to scale itself. With no limit on number of blockchains connected to the network, scalability can be solved by adding more blockchains when existing ones are full up to the maximum TPS. 
+
+Cosmos network will have blockchains for [specific use cases](https://blog.cosmos.network/why-application-specific-blockchains-make-sense-32f2073bfb37) which makes the network more efficient since blockchains can choose to not add a virtual machine in the nodes. Application specific blockchains can code the logic in the transaction itself rather than executing code in a virtual machine loaded inside the node. A virtual machine like the [Ethereum virtual machine](https://ethereum.org/en/developers/docs/evm/) is Turing complete and can execute code line by line.
 
 Cosmos network uses the hub and spoke architecture. The spokes are Zone blockchains which will connect to Hubs. Hubs will be used for inter blockchain communication, shared security and bridges to networks outside Cosmos ecosystem.
 
@@ -32,7 +34,7 @@ Cosmos network has value only when there are other zone blockchains which have i
 
 Using the [CosmosSDK](https://docs.cosmos.network) and Tendermint anyone can create a blockchain from scratch with its own set of validators. Cosmos network team has created a toolkit called [Starport](https://cosmos.network/starport/)  to create a new blockchain with a lot of boilerplate already created for you.
 
-Cosmos has multi token fee mechanism which makes the user experience so much better and opens up the ecosystem. The validators can choose which tokens are valuable to them. Validators having the most skin in the game will choose what is best for the users.
+Cosmos has multi token fee mechanism which makes the user experience so much better and opens up the ecosystem. The validators can choose which tokens are eligible to be used as transaction fee. Validators having the most skin in the game will choose what is best for the users.
 
 More sovereignty is a big step towards decentralisation. Any zone can choose not to participate in the CosmosHub IBC anytime.
 
