@@ -24,7 +24,7 @@ author:
   email: ''
 #author: Kush Goyal
 description: >- # this means to ignore newlines until "baseurl:"
-  Blog of Kush Goyal. I am an entrepreneur and a dreamer.
+  Blog of Kush Goyal. I write about crypto, saas and django.
   Currently I am running my software company sumtracker.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://kushgoyal.com" # the base hostname & protocol for your site, e.g. http://example.com
@@ -42,7 +42,6 @@ header_pages:
 minima:
   social_links:
     twitter: kushgoyal42
-    linkedin: kushgoyal
     github: false
 
 # Exclude from processing.

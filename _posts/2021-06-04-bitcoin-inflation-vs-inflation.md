@@ -16,9 +16,9 @@ Bitcoin will become deflationary (physical term) one day, which means with time 
 number of lost bitcoins > number of mined bitcoins
 ```
 
-<!--more-->
-
 We can assume this to be true after 24 years perhaps when mining reward will be too low. But at the current time bitcoin is probably inflationary (physical term).
+
+<!--more-->
 
 Bitcoin’s inflation (economic term) is a function of demand and supply. It is not a function of its reduced mining rewards because that does not say anything about demand. Whenever the price of bitcoin vs USD drops we can safely say the bitcoin has inflated (economic term). Over a period of last 5 years yes bitcoin has been highly deflationary (economic term). It might continue to be deflationary (economic term) for the next 100 years. Which means Bitcoin might continue to rise in value against USD.
 
