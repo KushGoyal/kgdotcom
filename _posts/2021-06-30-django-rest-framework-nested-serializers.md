@@ -72,7 +72,7 @@ Create method is not modified since create is straight forward. Update method is
 ```
 class ListUpdateSerializer(serializers.ListSerializer):
 
-    def set_parent_data(self, data, parent, parent_field=None):
+    def set_parent_data(self, data, parent):
         """
             This method is used to set data on the child objects from the parent object
             
@@ -95,8 +95,8 @@ class ListUpdateSerializer(serializers.ListSerializer):
             if hasattr(meta, 'generic_foreign_key'):
                 i[meta.generic_foreign_key[0]] = parent.pk
                 i[meta.generic_foreign_key[1]] = ContentType.objects.get_for_model(parent)
-            elif parent_field:
-                i[parent_field] = parent
+            if hasattr(meta, 'foreign_key_field_name'):
+                i[meta.foreign_key_field_name] = parent
 
     def update(self, instance, validated_data):
 
