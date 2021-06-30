@@ -21,45 +21,7 @@ To handle the above cases you have to modify both the create and update method o
 
 The parent serializer is the Invoice serializer and the child serializer is the line item serializer. Parent serializer will inherit the nested serializer behaviour. Below is the code for the nested serialiser.
 
-```
-from django.contrib.contenttypes.models import ContentType
-from django.db.transaction import atomic
-from rest_framework import serializers
-
-
-class NestedSerializerMixin(serializers.Serializer):
-
-    @atomic
-    def create(self, validated_data):
-        list_data = {}
-        # remove the child data from the validated_data
-        for key, val in self.get_fields().items():
-            # find the child fields and remove the data from validated_data dict
-            if isinstance(val, serializers.ListSerializer) and not val.read_only:
-                list_data[key] = validated_data.pop(key, [])
-        instance = super().create(validated_data)
-        # for each child data initialize the child list serializer and create the child objects
-        for key, data in list_data.items():
-            # noinspection PyTypeChecker
-            serializer: ListUpdateSerializer = self.get_fields()[key]
-            serializer.set_parent_data(data, instance)
-            serializer.create(data)
-        return instance
-
-    @atomic
-    def update(self, instance, validated_data):
-        list_data = {}
-        for key, val in self.get_fields().items():
-            if isinstance(val, serializers.ListSerializer) and not val.read_only:
-                list_data[key] = validated_data.pop(key, [])
-        instance = super().update(instance, validated_data)
-        for key, data in list_data.items():
-            # noinspection PyTypeChecker
-            serializer: ListUpdateSerializer = self.get_fields()[key]
-            serializer.set_parent_data(data, instance)
-            serializer.update(getattr(instance, key).all(), data)
-        return instance
-```
+<script src="https://gist.github.com/KushGoyal/5b72c5986fd6713fbf074dabca337a9d.js?file=nested_serializer.py"></script>
 
 Create and update methods are very similar. In both we are removing the nested child data from the `validated_data` dict,  then using the **list child serializers** to create or update the list of child data. This is done for every child field in a for loop.
 
@@ -69,65 +31,7 @@ Now let’s see the child list serializer code. We have created a list serialize
 
 Create method is not modified since create is straight forward. Update method is modified the handle the creation, updates and deletion of child objects within the update request of the parent model.
 
-```
-class ListUpdateSerializer(serializers.ListSerializer):
-
-    def set_parent_data(self, data, parent):
-        """
-            This method is used to set data on the child objects from the parent object
-            
-            There are 3. fields you can set on the meta class of the child serializer class:
-            1. from_parent_fields: this field is the list of common fields between the parent
-                                   and child model. The values are copied from parent to child
-            2. generic_foreign_key: this field is tuple of object_id and content_type_id field
-            3. foreign_key_field_name: this field is the field name of the foriegn key of the parent model on the child model
-
-            parent param is the instance of the parent model
-
-            data is the list of dicts for the validated_data in the parent serializer
-        """
-        meta = self.child.Meta
-        for i in data:
-            if hasattr(meta, 'from_parent_fields'):
-                for field in meta.from_parent_fields:
-                    if hasattr(parent, field):
-                        i[field] = getattr(parent, field, None)
-            if hasattr(meta, 'generic_foreign_key'):
-                i[meta.generic_foreign_key[0]] = parent.pk
-                i[meta.generic_foreign_key[1]] = ContentType.objects.get_for_model(parent)
-            if hasattr(meta, 'foreign_key_field_name'):
-                i[meta.foreign_key_field_name] = parent
-
-    def update(self, instance, validated_data):
-
-        # Maps for id->instance and id->data item.
-        obj_mapping = {obj.pk: obj for obj in instance}
-
-        existing_pks = []
-
-        ret = []
-
-        # find existing pks
-        for data in validated_data:
-            if data.get('id', None):
-                pk = data['id']
-                existing_pks.append(pk)
-
-        # Perform deletion of missing pks
-        self.child.Meta.model.objects.filter(id__in=set(obj_mapping.keys()) - set(existing_pks)).delete()
-
-        for data in validated_data:
-            if data.get('id', None):
-                # perform update
-                pk = data['id']
-                obj = obj_mapping[pk]
-                ret.append(self.child.update(obj, data))
-            else:
-                # perform create
-                ret.append(self.child.create(data))
-
-        return ret
-```
+<script src="https://gist.github.com/KushGoyal/5b72c5986fd6713fbf074dabca337a9d.js?file=list_serializer.py"></script>
 
 In the above code the `set_parent_data` is used to set data from the parent object on the child object by adding it the data dicts. This is done so that the API consumer does not have to supply the same data again and again in the list of child data. `set_parent_data` is called in the parent serialiser create and update method to set the values in the child data before saving the child data.
 
@@ -139,23 +43,4 @@ To the use the above list serializer class you have to set it on the child seria
 
 Below is an example of usage of the above serializer classes. The parent model is `PurchaseOrder` and the child model is the purchase order line item called  `Poline`.
 
-```
-class PurchaseOrderSerializer(NestedSerializerMixin):
-    lines = PoLineSerializer(many=True, required=False)
-    class Meta:
-        model = PurchaseOrder
-        fields = '__all__'
-
-
-class PoLineSerializer(serializers.ModelSerializer):
-    id = serializers.IntegerField(required=False)
-
-    class Meta:
-        model = PoLine
-        fields = '__all__'
-        list_serializer_class = ListUpdateSerializer
-        from_parent_fields = ['client_id', 'contact_id', 'warehouse_id', 'currency']
-        foreign_key_field_name = 'purchase_order'
-        # set by the serializer using parent instance so marked as read only
-        read_only_fields = from_parent_fields + [foreign_key_field_name,]
-```
+<script src="https://gist.github.com/KushGoyal/5b72c5986fd6713fbf074dabca337a9d.js?file=example.py"></script>
