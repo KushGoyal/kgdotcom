@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "kgweb-48709"
+  },
+  "targets": {
+    "kgweb-48709": {
+      "hosting": {
+        "kg": [
+          "kgweb-48709"
+        ]
+      }
+    }
   }
 }
