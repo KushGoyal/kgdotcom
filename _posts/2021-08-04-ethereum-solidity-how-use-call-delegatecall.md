@@ -12,12 +12,12 @@ Solidity has the `call` function on `address` data type which can be used to cal
 
 `call` is used to call the `fallback` and `receive` functions of the contract. Receive is called when no data is sent in the function call and ether is sent. Fallback function is called when no function signature matches the call.
 
-Although `call` has specific use cases it is important to learn how to use it.
+`call` consumes less gas than calling the function on the contract instance. So in some cases `call` is preferred for gas optimization.
+
+<!--more-->
 
 ## How to use call method?
 To use `call` you need to send encoded data as the param. The data will have the function signature and params encoded together.
-
-<!--more-->
 
 ```solidity
 
