@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2021-06-21
+date: 2021-06-27
 title: Cosmos Network Explained - Cosmos Hub, ATOM tokens, Gravity DEX
 categories: [crypto]
 image: /images/2021-06-27/cosmos-zones-4k.png
