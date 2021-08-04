@@ -20,6 +20,12 @@ To use `call` you need to send encoded data as the param. The data will have the
 <!--more-->
 
 ```solidity
+
+function myFunction(uint _x, address _addr) public returns(uint, uint) {
+    // do something
+	  return (a, b);
+}
+
 // function signature string should not have any spaces
 (bool success, bytes memory result) = addr.call(abi.encodeWithSignature("myFunction(uint,address)", 10, msg.sender);
 ```
@@ -29,7 +35,7 @@ The return value for the `call` function is a tuple of a boolean and bytes array
 To get the value of result in the actual data types you have to use `abi.decode`
 
 ```solidity
-(uint num, address sender) = abi.decode(result, (uint, address));
+(uint a, uint b) = abi.decode(result, (uint, uint));
 ```
 
 decode method takes in the bytes array returned from the function call and the tuple of data types. The returned values are in the same order as the data types tuple.
@@ -44,9 +50,9 @@ It is possible to supply amount of gas and ether to the `call` method.
 _addr.call{value: 1 ether, gas: 1000000}("myFunction(uint,address)");
 ```
 
-To call the `myFunction` method on the contract only the specified amount of gas will be supplied. The amount of the gas supplied to the outer function call can be more than the gas supplied here.
+To call the `myFunction` method on the contract only the specified amount of gas will be supplied. The amount of the gas supplied to the outer function where `call` is executed has to be more or equal to the gas supplied to the `call`.
 
-If no `gas` is mentioned all the gas remaining before the call is supplied to the `myFunction` call.
+If no `gas` is mentioned all the gas remaining before the call is supplied to the `myFunction` call. It is always better to not hardcode the gas supplied to the function call.
 
 If you are sending ether to the `call`  method,  `myFunction`  should be a `payable` function. Otherwise the call will fail.
 
@@ -71,4 +77,3 @@ function paySomeone(address _addr) public payable nonReentrant {
 `delegatecall` is used to call a function of contract B from contract A with contract A’s storage, balance and address supplied to the function. This is done for the purpose of using the function in contract B as library code. Since the function will behave as it was a function of Contract A itself. Check [this](https://solidity-by-example.org/delegatecall/) post for a code example. 
 
 `delegatecall` syntax is exactly the same as `call` syntax except it cannot accept the `value` option but only `gas`.
-
