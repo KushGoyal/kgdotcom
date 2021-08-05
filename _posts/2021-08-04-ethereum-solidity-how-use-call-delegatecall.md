@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2021-08-04
-title: How to use call for contract function calls and payments in Solidity
+title: How to use low level call for contract function calls and payments in Solidity
 categories: [crypto, coding]
 image: /images/2021-08-04/calls.jpg
 ---
@@ -12,7 +12,9 @@ Solidity has the `call` function on `address` data type which can be used to cal
 
 `call` is used to call the `fallback` and `receive` functions of the contract. Receive is called when no data is sent in the function call and ether is sent. Fallback function is called when no function signature matches the call.
 
-`call` consumes less gas than calling the function on the contract instance. So in some cases `call` is preferred for gas optimization.
+`call` consumes less gas than calling the function on the contract instance. So in some cases `call` is preferred for gas optimisation.
+
+Solidity has 2 more low level functions `delegatecall` and `staticcall` . `staticcall` is exactly the same as `call` with only difference that it cannot modify state of the contract being called. `delegatecall` is discussed below.
 
 <!--more-->
 
@@ -23,7 +25,7 @@ To use `call` you need to send encoded data as the param. The data will have the
 
 function myFunction(uint _x, address _addr) public returns(uint, uint) {
     // do something
-	  return (a, b);
+    return (a, b);
 }
 
 // function signature string should not have any spaces
@@ -62,6 +64,8 @@ If the amount of gas supplied to `call` is less than required by `myFunction` to
 After the Istanbul hardfork  `send` and `transfer` methods have been deprecated. Istanbul hardfork increased the gas cost for `SLOAD` opcode which is used to read a word from the blockchain. This has been explained in [this](https://consensys.net/diligence/blog/2019/09/stop-using-soliditys-transfer-now/) post by Consensys.
 
 If `transfer`  is used inside a function call of a contract a fixed gas of 2300 is supplied to the `transfer` method. Since gas cost is subjected to change the fixed gas cost might not be enough to successfully transfer the ether and the overall function call might fail.
+
+When a contract is sent ether using `call` the `receive` function is called provided `msg.data` is empty. If the `receive` function is not implemented then the `fallback` function is called.
 
 Using `call` to transfer ether opens up the possibility of a reentrancy attack since the gas supplied can be used to reenter the function by calling it again inside the receive or fallback function of the receiving contract. Reentrancy can be solved by using a reentrancy guard.
  
