@@ -3,6 +3,7 @@ layout: post
 date: 2021-11-28
 title: How to check the type of the contract in Solidity - ERC165 explained
 categories: [crypto, coding, solidity]
+image: /images/2021-11-28/interface.jpg
 ---
 
 Solidity does not have the concept of `typeof` or `isinstance`. Given a contract address you cannot find out if this is of a particular contract. But there is a way to do it if contract has implemented the `ERC165`  standard.
@@ -21,7 +22,7 @@ type(MyInterface).interfaceId
 <!--more-->
 
 OpenZepplin has created a utility contract called `ERC165Storage` which implements the `ERC165` standard and also has a method using which you can define which interfaces does the contract supports.
-```
+```solidity
 function _registerInterface(bytes4 interfaceId) internal;
 ```
 
