@@ -11,9 +11,9 @@ The two main bottle necks I see in building a saas company are product and distr
 
 By product I mean what are you solving. You can build anything under the sun. But does it really provide value is a tough question to answer. The best way to answer that question is to do sales.
 
-<!--more-->
-
 Sales brings us to distribution. Distribution is basically another word for sales but there is more to it. Distribution also includes how will the user buy your product and how you will on-board the user.
+
+<!--more-->
 
 Figuring out product and distribution applies to all kinds of saas products be it for enterprise or SMEs. Of course the methods of solving for each are drastically different.
 

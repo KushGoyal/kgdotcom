@@ -9,9 +9,9 @@ Ethereum is facing a scaling issue because of high transaction volume. More than
 
 **Eth 2.0** will solve the scalability issues by a combination of massive upgrades. I will summarise the new upgrades in this post. Eth 2.0 is still in development though and can take any of the numerous directions proposed by the Ethereum research team.
 
-<!--more-->
-
 Eth currently uses proof of work (PoW) as a consensus mechanism. Every 12.5s a block is produced and eth mining nodes execute smart contracts, verify the transactions and maintain the state of the blockchain.
+
+<!--more-->
 
 Eth is now transitioning to **proof of stake** (PoS) consensus mechanism which involves miners to stake eth and run a validator node. Eth 2.0 upgrade is divided into several stages and at the end of the upgrade transition to PoS will be complete along with other upgrades to increase the throughput of the blockchain.
 

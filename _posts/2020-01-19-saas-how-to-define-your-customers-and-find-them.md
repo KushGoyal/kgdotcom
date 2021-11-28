@@ -6,9 +6,10 @@ categories: [saas]
 ---
 
 I have made multiple attempts at starting a successful SAAS business. This time I think I have been able to do it. I am running [sumtracker](https://sumtracker.com/), an inventory and operations management software for product brands. We are still early but I am very confident about what we are doing. We have paying customers who are happy with the service and have got real tangible results from sumtracker.
-<!--more-->
 
 In this post I want to talk about the genesis of a SaaS business, which is the customer. Yes, not the product or the problem. They come after we have defined who is the customer. You might get the idea first but it is not a business without the customer. In the context of a SaaS business it is important to define the problem and the customer together in the same sentence.
+
+<!--more-->
 
 **In late 2018 after various attempts at building a SaaS business I took a break to think about other businesses I can do.** Like starting an ecommerce business or a software consultancy or even finding a remote job. None of the options seemed better to me when compared to a bootstrapped saas business. When I was on this break, we still had paying customers with us for sumtracker. And they did not want us to go. So I decided to take another shot at building sumtracker. I went back to our customers to understand what do they like about sumtracker because we as founders did not have any clue. You ask why didn't we have any clue? Because we never defined who is our customer. We sold sumtracker to anyone who was willing to buy it. And each customer was buying to solve a different problem. And soon enough we lost track of what we were building.
 
