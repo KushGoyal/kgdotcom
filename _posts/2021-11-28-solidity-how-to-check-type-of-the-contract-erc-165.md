@@ -38,7 +38,7 @@ This method calls `supportsInterface` on the address to check if the address sup
 How to use this?
 This is useful when you want to check if the given address is of a particular contract. But you should know before hand that the given address has implemented `ERC165`. Here is an example how you will use this.
 
-The below contract inherits `ERC165` and calls `_registerInterface` method in the constructor.
+The below contract inherits `ERC165Storage` and calls `_registerInterface` method in the constructor.
 
 ```solidity
 contract Sum is ERC165Storage, ISum {

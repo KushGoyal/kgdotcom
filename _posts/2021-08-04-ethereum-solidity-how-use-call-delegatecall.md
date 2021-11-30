@@ -29,7 +29,7 @@ function myFunction(uint _x, address _addr) public returns(uint, uint) {
 }
 
 // function signature string should not have any spaces
-(bool success, bytes memory result) = addr.call(abi.encodeWithSignature("myFunction(uint,address)", 10, msg.sender);
+(bool success, bytes memory result) = addr.call(abi.encodeWithSignature("myFunction(uint,address)", 10, msg.sender));
 ```
 
 The return value for the `call` function is a tuple of a boolean and bytes array. The boolean is the success or failure status of the call and the bytes array has the return values of the contract function called which need to be decoded.
@@ -49,7 +49,7 @@ If the function passed to the `call` method does not exist the `fallback` functi
 ## How to specify gas and transfer amount
 It is possible to supply amount of gas and ether to the `call` method.
 ```solidity
-_addr.call{value: 1 ether, gas: 1000000}("myFunction(uint,address)");
+_addr.call{value: 1 ether, gas: 1000000}(abi.encodeWithSignature("myFunction(uint,address)", 10, msg.sender));
 ```
 
 To call the `myFunction` method on the contract only the specified amount of gas will be supplied. The amount of the gas supplied to the outer function where `call` is executed has to be more or equal to the gas supplied to the `call`.
