@@ -4,6 +4,10 @@ date: 2021-06-03
 title: Terra blockchain and dApps explained in detail
 categories: [crypto]
 ---
+
+UPDATE (30th May 2022):
+Do not invest a dime in anything which Do Kwon builds.
+
 Terra is a PoS blockchain built using the [Cosmos SDK](https://v1.cosmos.network/intro). Cosmos SDK uses [Tendermint BFT](https://docs.tendermint.com/master/introduction/what-is-tendermint.html) consensus mechanism which is an open source platform developed by the Cosmos team. Terra is a stable coin platform which uses Luna the base token for stabilising the price of currencies. Terra aims to bring real world assets, currencies and use cases to decentralised economy.
 
 *This post is for educational purposes only. Not investment advice.*

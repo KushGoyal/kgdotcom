@@ -5,6 +5,10 @@ title: Cosmos Network Explained - Cosmos Hub, ATOM tokens, Gravity DEX
 categories: [crypto]
 image: /images/2021-06-27/cosmos-zones-4k.png
 ---
+
+
+![COSMOS](/images/2021-06-27/cosmos-zones-4k.png)
+
 [Cosmos](https://v1.cosmos.network/resources/whitepaper) is a network of interoperable blockchains. Cosmos uses [Tendermint](https://docs.tendermint.com/master/) BFT which is PoS based consensus algorithm. Tendermint BFT is an open source platform and can be used by any project.
 
 To create a network of blockchains Cosmos provides [CosmosSDK](https://docs.cosmos.network) (the application layer) and Tendermint SDK (the network and consensus layer) to give complete tools to launch a public or private blockchain. All the blockchains will implement [IBCI](https://ibcprotocol.org) (inter blockchain communication interface) so that they can transfer tokens and data between each other seamlessly.

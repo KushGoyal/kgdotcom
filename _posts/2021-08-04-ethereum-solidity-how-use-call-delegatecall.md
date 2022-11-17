@@ -81,3 +81,5 @@ function paySomeone(address _addr) public payable nonReentrant {
 `delegatecall` is used to call a function of contract B from contract A with contract A’s storage, balance and address supplied to the function. This is done for the purpose of using the function in contract B as library code. Since the function will behave as it was a function of Contract A itself. Check [this](https://solidity-by-example.org/delegatecall/) post for a code example. 
 
 `delegatecall` syntax is exactly the same as `call` syntax except it cannot accept the `value` option but only `gas`.
+
+A popular and very useful use case for `delegatecall` is upgradable contracts. Upgradable contracts use a proxy contract which forwards all the function calls to the implementation contract using `delegatecall`. The address of the proxy contract remains constant while new implementations can be deployed multiple times. The address of the new implementation gets updated in the proxy contract. The proxy contract has the state of the contract storage intact. Check [Openzepplin docs](https://docs.openzeppelin.com/upgrades-plugins/1.x/proxies) for a detailed explanation.

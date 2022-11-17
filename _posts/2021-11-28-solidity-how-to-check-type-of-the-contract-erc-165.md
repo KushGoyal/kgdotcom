@@ -6,6 +6,8 @@ categories: [crypto, coding, solidity]
 image: /images/2021-11-28/interface.jpg
 ---
 
+![INTERFACE](/images/2021-11-28/interface.jpg)
+
 Solidity does not have the concept of `typeof` or `isinstance`. Given a contract address you cannot find out if this is of a particular contract. But there is a way to do it if contract has implemented the `ERC165`  standard.
 
 `ERC165` standard has just one method
@@ -70,3 +72,9 @@ contract Checker is ERC165Checker {
 ```
 
 This is useful when you want to restrict what kind of contracts that can be supplied to the function. Each contract you want to allow for needs to implement `ERC165` .
+
+### Read more
+<https://eips.ethereum.org/EIPS/eip-165>  
+<https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165Storage>  
+<https://docs.openzeppelin.com/contracts/4.x/api/utils#ERC165Checker>  
+<https://docs.openzeppelin.com/contracts/4.x/utilities#introspection>  
